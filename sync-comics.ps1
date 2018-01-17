@@ -8,6 +8,10 @@ foreach ($comic in $catalog) {
     $comic.title = "おかしなクロミちゃん　第20話"
   }
 
+  if ($comic.title -match "^(.+)　第(\d+)話$") {
+    $comic.title = "$($Matches[1])　第$($Matches[2].PadLeft(3, "0"))話"
+  }
+
   $dir = Join-Path data $comic.key
   $output = Join-Path data "$($comic.title).zip"
   $haveArchive = Test-Path $output
