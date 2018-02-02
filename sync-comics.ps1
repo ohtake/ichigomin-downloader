@@ -3,11 +3,6 @@
 $catalog = Get-Content -Encoding UTF8 -Raw (Join-Path data data.json) | ConvertFrom-Json
 
 foreach ($comic in $catalog) {
-  # Fix catalog errors
-  if ($comic.key -eq "kuromi_20") {
-    $comic.title = "おかしなクロミちゃん　第20話"
-  }
-
   if ($comic.title -match "^(.+)　第(\d+)話$") {
     $comic.title = "$($Matches[1])　第$($Matches[2].PadLeft(3, "0"))話"
   }
