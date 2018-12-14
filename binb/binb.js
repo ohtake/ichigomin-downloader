@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         BinB阅读器捕获脚本(v016112)
+// @name         BinB阅读器捕获脚本(v016112)-ichigomin
 // @namespace    summer-script
 // @version      0.5.1
 // @description  用于binb阅读器v016112版本的小说漫画的获取脚本
 // @author       summer
-// @match        https://r.binb.jp/epm/*
+// @match        http://comip.jp/15/cbs/*
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
@@ -51,7 +51,7 @@
                 return this.tbl;
             }
             // var path = 'swsapi/bibGetCntntInfo';
-            var path = '/~/bibGetCntntInfo';
+            var path = '/15/cbs/~/bibGetCntntInfo';
             var token = this._getRandKey();
             var api = this;
             var data = {
@@ -235,8 +235,8 @@
         },
 
         getCid: function() {
-            if (document.getElementById('binb_cid')) {
-                return document.getElementById('binb_cid').value;
+            if (document.getElementById('content')) {
+                return document.getElementById('content').getAttribute('data-ptbinb-cid');
             } else if (undefined !== this._getUrlParam('cid')) {
                 return this._getUrlParam('cid');
             }
