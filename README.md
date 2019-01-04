@@ -1,3 +1,7 @@
+# DEPRECATED
+
+Tankobon will be published in 2019 spring. See <https://twitter.com/ichigo__min/status/1080387197994323968>.
+
 # ichigomin downloader
 
 Download and archive [Ichigomin](http://comip.jp/15/) comics.
