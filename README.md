@@ -1,6 +1,7 @@
 # DEPRECATED
 
-Tankobon will be published in 2019 spring. See <https://twitter.com/ichigo__min/status/1080387197994323968>.
+* The site will be closed at the end of January 2020. See <https://twitter.com/ichigo__min/status/1189910008260988928>.
+* Tankobon will be published in 2019 spring. See <https://twitter.com/ichigo__min/status/1080387197994323968>.
 
 # ichigomin downloader
 
